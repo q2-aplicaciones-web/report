@@ -14,7 +14,7 @@ Sección: 4350
 
 Docente: Angel Augusto Velasquez Nuñez
 
-Integrantes: Dante Mateo Aleman Romano, Jonatan Ariel Acuña Corahua, Fabrizio Alessandro Contreras Peralta, Renzo Andres Luque Minaya, Juan Carlos Alvarado De La Cruz, Brayan Ccarita Cruz, Neil Aldrin Curipaco Huayllani
+Integrantes: Dante Mateo Aleman Romano, Jonatan Ariel Acuña Corahua, Fabrizio Alessandro Contreras Peralta, Neil Aldrin Curipaco Huayllani
 
 TP
 
