@@ -210,7 +210,9 @@ Durante el Sprint 3, el equipo trabajó de manera coordinada para elaborar las s
 
 - Colaboró en la documentación estructural del informe para mantener consistencia narrativa entre entregas.
 
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcyIVlZGFtnzaMLjAYLjVf7DjsCgPilvOCO50Jdai2ovjIgDHwflKa17CgoZhC1XWtbm3iFJ_mwMpcwA_npHSnG4BsD3-D7LkIxf6b1X1XX1huHbNMiA8U-TnqQnpwaHRCh88w-SA?key=J06Wc8-GfXXlOJgmuX32uwpk)
 
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdgmSDp_1CdqX18l-ONkKIIb8RmOhwVYh-WaParxH2f610jK4ZpFS9j7ttXfk2gukNGuUD5Pr8rwt7jknGDRZPyfwtZzLqZGTs_19U0KT2WfZwquOx3uHgJMjOKpQJG01omsR5nZg?key=J06Wc8-GfXXlOJgmuX32uwpk)
 
 # Contenido
 
@@ -3795,7 +3797,23 @@ A continuación se presenta el **Sprint Backlog 3**, que agrupa todas las User S
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
+Durante el Sprint 3, el equipo Q2 logró implementar de manera efectiva los módulos funcionales clave de la aplicación TeeLab, consolidando su estructura como plataforma integral para el diseño, gestión y producción de prendas personalizadas. Se completaron las funcionalidades correspondientes a cinco value contents prioritarios, integrando tanto desarrollo en Web App como en Web Service:
 
+- Analytics (AL): Se desarrolló el panel de métricas para fabricantes, permitiendo visualizar estadísticas de pedidos recibidos.
+
+  
+
+- Design Lab (DL): Se fortaleció el editor de prendas, permitiendo a los usuarios crear y guardar proyectos, añadir capas de imagen y texto, y visualizar el diseño en tiempo real.
+
+  
+
+- Product Catalog (PC): Se habilitó la vista de exploración de productos con filtros dinámicos por nombre, precio y etiquetas, así como vistas detalladas de cada producto.
+
+  
+
+- User Management (UM): Se añadió la funcionalidad de gestión de perfiles tanto para usuarios diseñadores como para fabricantes, con edición de datos personales y vista de roles.
+
+Estas funcionalidades fueron integradas mediante el Web Service desarrollado en paralelo, garantizando coherencia visual, respuestas eficientes y navegación fluida en la plataforma. El trabajo colaborativo del equipo permitió alinear los entregables con los objetivos del Sprint, brindando una experiencia clara y funcional a los usuarios diseñadores, compradores y fabricantes.
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
@@ -3817,11 +3835,139 @@ A continuación se presenta la relación de los Endpoints documentados durante e
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
+Para el despliegue del Web Service, se utilizó Railway.app como plataforma de gestión y despliegue continuo. Esta herramienta permitió poner en producción el backend de manera sencilla, facilitando la administración del entorno, la ejecución de la aplicación y la disponibilidad del servicio de forma estable y escalable.
 
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeTBkeiIs961s_0LXDUBRlF-ZJYPrCW8hZgcLGOlhXZ-SI6pcNuPiXRm5YDrjkParlwVu6kQWEWp4pVJgYlD_nnVHgBiIW2kPDq5ogqkvvI5nmaJJp-wnOMpb5l2ilu13RHbgZBJg?key=J06Wc8-GfXXlOJgmuX32uwpk)
+
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXf_W-4TebT2nxVd9cI1ld7jrOQSmMZEoOoTJ-IaAdnBTcGLCfKxwRaSAt_7SfSZBdHbH9eCrsmlLVw2Z4Qt1njw4Gcz3_oR6NQD4cFcsWAk8nNrqcpaEpw1EaYcyw3pr5S_3za-ow?key=J06Wc8-GfXXlOJgmuX32uwpk)
+
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdcrC_EW3ljYa5sglHFgH1P762fIqRUIcpNoBsTM5Sff6_c3BQpg-o7YJo9cSG1PAjswb-d9gGkJnaMp3f86ItyCgaZ8XZhogGElRgDQOu-Zoog12zltkGc8n1fGgI6y6HPIKPXyw?key=J06Wc8-GfXXlOJgmuX32uwpk)
+
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdb-fgazn7KdZxzNjXl2uCnMPja4gqj1b-ZAJ2RPteX9O1daeXS60Ft9iNHIlSyv_8CtmuPCcxmMDFgbloz_oAD_pGyWUCQ2fyQNojjDyurxNl0ejoivg8DLJC_jLd6a_OJW5cWgw?key=J06Wc8-GfXXlOJgmuX32uwpk)
+
+**Disclaimer Técnico sobre la Conectividad entre el Frontend y la API (Swagger OpenAPI)**
+
+Durante el proceso de integración entre el frontend de nuestra aplicación y la API documentada en Swagger (OpenAPI), se presentaron errores críticos que impidieron establecer una conexión funcional con los endpoints del backend desplegado. A pesar de múltiples intentos utilizando diferentes métodos de solicitud, incluyendo pruebas directas desde Swagger UI y herramientas externas como **curl**, los resultados obtenidos fueron consistentes y concluyentes: el servidor respondió de manera reiterada con errores 500 Internal Server Error.
+
+Estos errores fueron evidenciados al enviar peticiones correctamente formateadas tanto al endpoint **GET /api/v1/projects/users/{userId}** como al endpoint **POST /api/v1/projects/create**. En todos los casos, se incluyeron los encabezados requeridos, los parámetros solicitados y, cuando fue necesario, el cuerpo del mensaje estructurado en formato JSON conforme a lo especificado en la documentación Swagger. A pesar de ello, las respuestas devueltas por el servidor indicaron fallas internas en el procesamiento de dichas solicitudes, lo cual sugiere errores lógicos o técnicos en la implementación del backend.
+
+Es importante destacar que la interfaz Swagger UI se encuentra disponible y responde con estado HTTP 200, lo que confirma que el servidor está en línea y accesible. Sin embargo, aunque se pueda acceder a la documentación, los endpoints documentados no se ejecutan correctamente al ser invocados, generando respuestas con código de estado 500. Esta condición elimina la posibilidad de que el problema esté relacionado con fallas de conectividad, errores de CORS o configuraciones incorrectas del entorno cliente.
+
+En base a esta evidencia, se concluye que los problemas presentados no corresponden a fallos en el frontend, en el entorno de desarrollo o en la manera en que se consumen los servicios, sino que se originan directamente en la implementación de la API. Las solicitudes fueron recibidas correctamente por el servidor, pero durante su procesamiento se produjeron errores que impidieron generar respuestas exitosas. Existen otros factores que podrían estar generando estos errores internos, tales como cambios recientes en dependencias, configuración incompleta del entorno de producción, incompatibilidades entre versiones del framework, errores en la base de datos, o incluso limitaciones impuestas por la infraestructura del servicio de despliegue (por ejemplo, Railway). También es posible que ciertos parámetros de entrada estén generando errores no controlados que el backend no esté manejando adecuadamente, lo cual no implica un error estructural sino una excepción no anticipada.
+
+En conclusión, se confirma que la imposibilidad de conexión no se origina en el frontend ni en las peticiones enviadas, sino que responde a fallas internas. Se recomienda revisar exhaustivamente los controladores, servicios y logs del entorno productivo para identificar las causas exactas de estos errores 500, así como realizar pruebas unitarias sobre los endpoints afectados para asegurar un manejo adecuado de errores y excepciones.
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
+Durante el Sprint 3, el equipo Q2 mantuvo una dinámica de trabajo colaborativo caracterizada por una fuerte comunicación, planificación anticipada y una distribución clara de responsabilidades tanto para el desarrollo de la Web App como del Web Service. Cada integrante asumió roles de liderazgo o colaboración dentro de los diferentes value contents, enmarcados en la matriz LACX.
 
+**Jonatan Ariel Acuña Corahua (JonatanFD)**
+
+- Rol técnico: Líder de *Design Lab* en Web Service, y soporte en *Product Catalog*, *Order Fulfillment* y *User Management* en Web App.
+
+  
+
+- Acciones destacadas:
+
+  
+
+  - Implementó los comandos y endpoints de creación de proyectos y capas en el editor.
+
+    
+
+  - Refactorizó múltiples endpoints para mejorar la consistencia y la validación.
+
+    
+
+  - Participó activamente en pruebas y validaciones cruzadas.
+
+    
+
+ **Fabrizio Alessandro Contreras Peralta (Fabrizio Contreras)**
+
+- Rol técnico: Líder de *Analytics* en Web App, colaborador en *Design Lab* y *User Management*.
+
+  
+
+- Acciones destacadas:
+
+  
+
+  - Desarrolló la interfaz de métricas para fabricantes.
+
+    
+
+  - Coordinó el uso de datos simulados para representar estadísticas.
+
+    
+
+  - Apoyó la documentación de los endpoints con ejemplos claros.
+
+    
+
+  - Gestionó la implementación de capas gráficas en el Design Lab.
+
+    
+
+**Dante Mateo Alemán Romano (zGIKS)**
+
+- Rol técnico: Líder de *User Management*, soporte en *Product Catalog* y *Order Fulfillment*.
+
+  
+
+- Acciones destacadas:
+
+  
+
+  - Diseñó e implementó la vista de perfil editable para usuarios y fabricantes.
+
+    
+
+  - Apoyó en la integración del catálogo con filtros dinámicos.
+
+    
+
+  - Coordinó la trazabilidad entre vistas y rutas privadas/protegidas.
+
+    
+
+  - Supervisó commits en las ramas feature de Web App y colaboró en revisión de código.
+
+    
+
+**Neil Aldrin Wilhelm Curipaco Huayllani (Neilcuri)**
+
+- Rol técnico: Colaborador en *Analytics*, *Design Lab*, *Product Catalog* y *Order Fulfillment*.
+
+  
+
+- Acciones destacadas:
+
+  
+
+  - Validó los contratos de los endpoints mediante Swagger y Postman.
+
+    
+
+  - Realizó pruebas con datos de ejemplo y reportó bugs a corregir.
+
+    
+
+  - Ayudó en la revisión y ajuste de parámetros de búsqueda en la exploración de productos.
+
+    
+
+  - Participó en el ajuste visual del Design Lab y pruebas de funcionalidad.
+
+Se desconoce el motivo por el cual no se muestre de forma correcta las contribuciones 
+
+Captura de Web App
+
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfrb7Vz2m4W-YleU0T55_mXwMYTtyk_tjFsM97EQmbVNVszwBWihhWNbDY6-BJPNaF8q-L1YqRRiUqVuE8q46xApXKoMsZU6WsxHKk5QZk-RU8FO7YzLiKxwIEzWJieJdVIWorolw?key=J06Wc8-GfXXlOJgmuX32uwpk)
+
+Captura de Web Service
+
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcuuT2_692eFWN2HLsTRotg2eE7s13Gy0TOjj8nnAYJIgLhIfoKXT9TOA3Ye_Lkfza0E7fCiM3vRLp65YZjYASjMuiM4srtQimCj2Kd6j_Cud7kuBHIVtzVJbM_pT4g7-3tFYSS?key=J06Wc8-GfXXlOJgmuX32uwpk)
 
 ## 5.3. Validacion Interviews
 
@@ -4046,29 +4192,24 @@ Formulación de las preguntas:
 
 ### 5.3.2. Registro de Entrevistas
 
-| **Segmento objetivo #1: Diseñadores:**                       |               |
-| ------------------------------------------------------------ | ------------- |
-| **Entrevista 1:**                                            |               |
-| **Sexo:**                                                    | **Edad:**     |
-| **Instante en el que inicia:**                               | **Duración:** |
-|                                                              |               |
-| **Resumen:** El entrevistado expresó apreciaciones críticas respecto a las funcionalidades del editor de camisetas, centradas principalmente en las limitaciones del diseño y personalización. En primer lugar, señaló que únicamente es posible diseñar la parte frontal de la prenda, lo cual consideró restrictivo para un diseño completo, ya que no se puede intervenir la espalda ni las mangas. Esta falta de cobertura reduce las posibilidades creativas, especialmente para quienes buscan un diseño integral.En cuanto a las herramientas ofrecidas por el editor, el usuario consideró que son demasiado básicas. Aunque permite subir imágenes y añadir texto, no cuenta con funcionalidades adicionales como insertar formas, trabajar con capas, ni utilizar vectores, lo que limita la flexibilidad y control sobre el diseño final.Respecto a las tipografías, el entrevistado manifestó que el catálogo disponible es muy limitado y que no existe la opción de cargar fuentes personalizadas, lo cual afecta especialmente a usuarios que ya cuentan con sus propias tipografías y desean incorporarlas en sus diseños.Finalmente, también se evidenció una limitación en el tipo de prendas disponibles. El entrevistado comentó que únicamente encontró polos clásicos, y echó en falta otras opciones como sudaderas, camisetas sin mangas o crop tops, lo cual restringe aún más la capacidad de personalización y variedad de productos a diseñar.**Datos adicionales:**Marcas de camisetas preferidas:** Gildan y Fruit of the Loom. **Dispositivos usados para diseñar:** Laptop de marca Lenovo con sistema operativo Windows 10 y smartphone android. **Programas de edición utilizados:** Adobe Illustrator y Photoshop. **Canales de información sobre tendencias:** Instagram, Pinterest, Vogue y Behance. **Motivations:**** ** Vender sus diseños en productos físicos (como camisetas), mostrar sus diseños en maquetas realistas, tener una plataforma fácil de usar y recibir pedidos personalizados.**Frustrations:** ** No tener una plataforma interactiva y accesible donde sus diseños sean mostrados de manera atractiva; limitaciones actuales de exposición en redes.**Browsers:**** Instagram, Facebook, YouTube, LinkedIn, Pinterest.**Devices:** ** Laptop de marca Lenovo con sistema operativo Windows 10 y smartphone android. |               |
 
-| **Segmento objetivo #2: Usuario general:**                   |               |
-| ------------------------------------------------------------ | ------------- |
-| **Entrevista 1:**                                            |               |
-| **Sexo:**                                                    | **Edad:**     |
-| **Instante en el que inicia:**                               | **Duración:** |
-|                                                              |               |
-| **Resumen:** El entrevistado compartió observaciones relevantes sobre su experiencia al previsualizar el diseño de la camiseta y el proceso previo a la compra. En primer lugar, indicó que solo es posible visualizar la parte frontal de la prenda, sin opción de explorar otras vistas como la espalda, los costados o las mangas. Manifestó que le gustaría contar con una funcionalidad para girar la prenda y así evaluar mejor cómo se verá el diseño en su totalidad, lo que considera clave antes de tomar la decisión de compra.En relación con el acabado final del producto, el entrevistado señaló que no tiene claridad sobre cómo será la impresión. Comentó que solo vio una imagen del diseño aplicado, pero no se le proporcionó información sobre la técnica de estampado (como serigrafía o impresión directa) ni sobre los materiales de la prenda. Esta falta de transparencia genera incertidumbre sobre la calidad del producto final.Finalmente, el entrevistado mencionó que no encontró información relevante relacionada con el producto más allá del diseño y el precio. Lamentó que no se indicara quién fabricará la camiseta, ni se mostraran detalles del proveedor o características específicas de la prenda como el tipo de tela. Esta ausencia de datos limita la confianza en la compra y reduce la percepción de valor del producto.**Datos adicionales:****Marcas de camisetas preferidas:** Prefiere calidad sobre marcas específicas.**Dispositivos usados para diseñar o comprar:** Laptop de marca Hp con sistema operativo Windows 10 y smartphone android.**Programas de edición utilizados:** No especificó programas, pero busca herramientas interactivas para crear diseños personalizados.**Canales de información sobre tendencias:** Instagram, Pinterest y sitios especializados en moda. **Motivations:** Crear y personalizar su propio diseño para camisetas, tener control sobre el diseño final, calidad del material.**Frustrations:** Comprar camisetas con diseños que no reflejan su gusto; limitaciones de personalización.**Browsers:** Instagram, Pinterest, TikTok, Facebook, WhatsApp.**Devices:** Laptop de marca Hp con sistema operativo Windows 10 y smartphone android. |               |
 
-| **Segmento objetivo #3: Marcas o emprendedores:**            |               |
-| ------------------------------------------------------------ | ------------- |
-| **Entrevista 1:**                                            |               |
-| **Sexo:**                                                    | **Edad:**     |
-| **Instante en el que inicia:**                               | **Duración:** |
-|                                                              |               |
-| **Resumen:**El entrevistado, en su rol de fabricante, expresó varias limitaciones que afectan su experiencia al usar la plataforma. En primer lugar, comentó que no existe una sección dedicada ni clara para fabricantes, lo que dificulta entender cómo empezar a operar dentro del sistema. Mencionó la ausencia de instrucciones específicas, información sobre márgenes de ganancia o reglas de participación, lo que genera incertidumbre sobre el funcionamiento del modelo de negocio.Respecto al seguimiento de pedidos, indicó que no hay una vista centralizada para monitorear los pedidos recibidos o aceptados. Actualmente debe revisar uno por uno, lo cual resulta poco práctico. El entrevistado propuso que los pedidos estén organizados por estado o fecha, lo que facilitaría una mejor gestión operativa.También mencionó que no tiene acceso a los datos de los clientes, lo que representa un problema al momento de coordinar entregas o resolver dudas específicas sobre los pedidos. La falta de un canal de comunicación directa ralentiza la atención y puede generar errores en la producción o en la logística.Por último, expresó que su perfil como fabricante es muy limitado. Actualmente no puede incluir su nombre comercial, logo ni catálogo, lo cual le impide visibilizar su marca. Esta falta de identidad corporativa dentro de la plataforma lo desmotiva, ya que no puede posicionarse ni diferenciarse frente a otros fabricantes.**Tipo de clientes:** Personas naturales, instituciones educativas, empresas deportivas (campeonatos y eventos especiales).**Principales desafíos:** Cambios de último momento en el diseño o la cantidad, afectando los tiempos de entrega.**Dispositivos usados:** Laptop de marca Hp con sistema operativo Windows 10 y smartphone android.**Programas de edición utilizados:** Adobe Illustrator y Photoshop.**Canales de información sobre tendencias:** Instagram, Behance, páginas especializadas en moda. **Motivations:** Cumplir pedidos personalizados de clientes variados (eventos, instituciones) de forma eficiente; aceptar tanto diseños propios como externos.**Frustrations:** Cambios de último momento en diseños o cantidades por parte de los clientes, lo que causa retrasos.**Browsers:** Instagram, WhatsApp, Facebook, YouTube, LinkedIn.**Devices:** Laptop de marca Hp con sistema operativo Windows 10 y smartphone android. |               |
+Link del video: [upc-pre-202510-1asi0730-4395-Q2-validation-sprint-3.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b866_upc_edu_pe/ES089su3bDZMidcmMF76lXYBOKC78ZSPmBQlehwMxjfz9w?e=1GOSdE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+| **Segmento objetivo #1:**                                    |                                       |
+| ------------------------------------------------------------ | ------------------------------------- |
+| **Entrevista 1: Grecia Curipaco**                            |                                       |
+| **Sexo: Femenino**                                           | **Edad:** 24 años                     |
+| **Instante en el que inicia:** 0 minutos                     | **Duración: 2 minutos y 25 segundos** |
+| ![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcvv4P5-mrPkcVRapDg7OD4vunu6vpN_J557C45Q_oUbVxl7lISFVVAWxsM9rgu7sl_IBHKZ3ElgmOfOYTr67wRiWyQK2w6Xxjk5CYZy50DZ0YsoEn1DxN43NPBLFTPYXV5P-CkNg?key=J06Wc8-GfXXlOJgmuX32uwpk) |                                       |
+| **Resumen:**** **El entrevistado expresó apreciaciones críticas respecto a las funcionalidades del editor de camisetas, centradas principalmente en las limitaciones del diseño y personalización. En primer lugar, señaló que únicamente es posible diseñar la parte frontal de la prenda, lo cual consideró restrictivo para un diseño completo, ya que no se puede intervenir la espalda ni las mangas. Esta falta de cobertura reduce las posibilidades creativas, especialmente para quienes buscan un diseño integral.En cuanto a las herramientas ofrecidas por el editor, el usuario consideró que son demasiado básicas. Aunque permite subir imágenes y añadir texto, no cuenta con funcionalidades adicionales como insertar formas, trabajar con capas, ni utilizar vectores, lo que limita la flexibilidad y control sobre el diseño final.Respecto a las tipografías, el entrevistado manifestó que el catálogo disponible es muy limitado y que no existe la opción de cargar fuentes personalizadas, lo cual afecta especialmente a usuarios que ya cuentan con sus propias tipografías y desean incorporarlas en sus diseños.Finalmente, también se evidenció una limitación en el tipo de prendas disponibles. El entrevistado comentó que únicamente encontró polos clásicos, y echó en falta otras opciones como sudaderas, camisetas sin mangas o crop tops, lo cual restringe aún más la capacidad de personalización y variedad de productos a diseñar.**Datos adicionales:****Marcas de camisetas preferidas:** Gildan y Fruit of the Loom. **Dispositivos usados para diseñar:** Laptop de marca Lenovo con sistema operativo Windows 10 y smartphone android. **Programas de edición utilizados:** Adobe Illustrator y Photoshop. **Canales de información sobre tendencias:** Instagram, Pinterest, Vogue y Behance. **Motivations:**** ** Vender sus diseños en productos físicos (como camisetas), mostrar sus diseños en maquetas realistas, tener una plataforma fácil de usar y recibir pedidos personalizados.**Frustrations:**** ** No tener una plataforma interactiva y accesible donde sus diseños sean mostrados de manera atractiva; limitaciones actuales de exposición en redes.**Browsers:**** ** Instagram, Facebook, YouTube, LinkedIn, Pinterest.**Devices:**** ** Laptop de marca Lenovo con sistema operativo Windows 10 y smartphone android. |                                       |
+
+| **Entrevista 1: Guiliana Nisbet**                            |                         |
+| ------------------------------------------------------------ | ----------------------- |
+| **Sexo: Femenino**                                           | **Edad:** 28 años       |
+| **Instante en el que inicia:4 minutos y 50 segundos**        | **Duración: 2 minutos** |
+| ![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdqN_xf9nR1GxcIq2HUxGvuPAhaqEe4dDgnt26v9RvmaXgP6B0ynkG-g-2g2p2tihd1qLUrnpbvGs8qai5_MWIVXJ8sKCV9djyRvUsXCAT3O4lnyjIpRlbHZvOunITXfCNG_lFivQ?key=J06Wc8-GfXXlOJgmuX32uwpk) |                         |
+| **Resumen:**El entrevistado, en su rol de fabricante, expresó varias limitaciones que afectan su experiencia al usar la plataforma. En primer lugar, comentó que no existe una sección dedicada ni clara para fabricantes, lo que dificulta entender cómo empezar a operar dentro del sistema. Mencionó la ausencia de instrucciones específicas, información sobre márgenes de ganancia o reglas de participación, lo que genera incertidumbre sobre el funcionamiento del modelo de negocio.Respecto al seguimiento de pedidos, indicó que no hay una vista centralizada para monitorear los pedidos recibidos o aceptados. Actualmente debe revisar uno por uno, lo cual resulta poco práctico. El entrevistado propuso que los pedidos estén organizados por estado o fecha, lo que facilitaría una mejor gestión operativa.También mencionó que no tiene acceso a los datos de los clientes, lo que representa un problema al momento de coordinar entregas o resolver dudas específicas sobre los pedidos. La falta de un canal de comunicación directa ralentiza la atención y puede generar errores en la producción o en la logística.Por último, expresó que su perfil como fabricante es muy limitado. Actualmente no puede incluir su nombre comercial, logo ni catálogo, lo cual le impide visibilizar su marca. Esta falta de identidad corporativa dentro de la plataforma lo desmotiva, ya que no puede posicionarse ni diferenciarse frente a otros fabricantes.**Tipo de clientes:** Personas naturales, instituciones educativas, empresas deportivas (campeonatos y eventos especiales).**Principales desafíos:** Cambios de último momento en el diseño o la cantidad, afectando los tiempos de entrega.**Dispositivos usados:** Laptop de marca Hp con sistema operativo Windows 10 y smartphone android.**Programas de edición utilizados:** Adobe Illustrator y Photoshop.**Canales de información sobre tendencias:** Instagram, Behance, páginas especializadas en moda. **Motivations:** Cumplir pedidos personalizados de clientes variados (eventos, instituciones) de forma eficiente; aceptar tanto diseños propios como externos.**Frustrations:** Cambios de último momento en diseños o cantidades por parte de los clientes, lo que causa retrasos.**Browsers:** Instagram, WhatsApp, Facebook, YouTube, LinkedIn.**Devices:**** ** Laptop de marca Hp con sistema operativo Windows 10 y smartphone android. |                         |
 
 ### 5.3.3. Evaluación según heurísticas 
 
@@ -4078,15 +4219,15 @@ Usability – Inclusive Design – Information Architecture
 
 CARRERA 		: Ingeniería de Software
 
-CURSO 		: Desarrollo de Aplicaciones Open Source 
+CURSO 		: Desarrollo de Aplicaciones web 
 
-SECCIÓN 		: 4350
+SECCIÓN 		:  4395
 
-PROFESORES 	: Todos 
+PROFESORES 	: Angel Augusto Velasquez Nuñez
 
 AUDITOR 		: Nombre del Grupo que ejecuta la Sesión de evaluación
 
-CLIENTE(S) 		: Grecia Curipaco, Giuliana Nisbeth y Orianka Buitrón
+CLIENTE(S) 		: Grecia Curipaco, Giuliana Nisbeth y Angela Galdes
 
 SITE o APP A EVALUAR: 
 
@@ -4203,38 +4344,57 @@ SEGMENTO: MANUFACTURERS (Fabricantes / Vendedores)
   Segmento: Manufacturers
   Problema: No hay una sección clara que explique cómo ser fabricante, aceptar diseños, establecer márgenes, y gestionar producción.
   Recomendación: Crear una sección “Produce en Q2” con onboarding paso a paso, reglas operativas, políticas de ingresos y ejemplos ilustrativos.
-
 - Severidad: 2
   Heurística violada: Visibilidad del estado del sistema
   Segmento: Manufacturers
   Problema: No existe un panel centralizado que permita ver de forma unificada los diseños aceptados, los pedidos en curso y los ya enviados.
   Recomendación: Diseñar un “Panel del Fabricante” con secciones específicas, filtros por estado, fechas y acceso directo a cada pedido.
-
 - Severidad: 3
   Heurística violada: Ayuda y documentación
   Segmento: Manufacturers
   Problema: No hay forma de comunicarse directamente con el cliente para resolver dudas sobre pedidos, archivos o entregas.
   Recomendación: Implementar un sistema de mensajería interna por pedido, que respete privacidad pero facilite la coordinación directa.
-
 - Severidad: 2
   Heurística violada: Ayuda y documentación
   Segmento: Manufacturers
   Problema: El fabricante no tiene acceso a información mínima del cliente (ni siquiera nombre o contacto controlado), dificultando la resolución de incidentes.
   Recomendación: Mostrar datos limitados y controlados como nombre y canal interno de mensajería autenticada.
-
 - Severidad: 3
   Heurística violada: Ayuda y documentación
   Segmento: Manufacturers
   Problema: No existe una sección de soporte técnico especializada para fabricantes, y el único canal disponible es un formulario genérico.
   Recomendación: Crear un centro de soporte exclusivo con artículos técnicos, chat y tickets clasificados por tipo de problema.
-
 - Severidad: 2
   Heurística violada: Flexibilidad y eficiencia de uso
   Segmento: Manufacturers
   Problema: Los fabricantes no pueden personalizar su perfil público, lo que impide construir una marca visible dentro de la plataforma.
   Recomendación: Permitir crear perfiles personalizados con nombre comercial, logo, descripción, catálogo activo y sistema de calificaciones.
 
-- 
+
+
+## 5.4. Video About-the-Product
+
+Link del Video: [upc-pre-202510-1asi0730-4395-Q2-about-the-product-sprint-3.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b866_upc_edu_pe/ETU6rPNORslGoiMykT19EEEBI48r3GSlfCfLVXeN1r8lFQ?e=dFwlIy&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+El video tiene como propósito principal presentar, de manera clara y atractiva, el modelo de negocio y las funcionalidades clave de la plataforma TeeLab, orientada al diseño y compra de camisetas personalizadas.
+
+En la secuencia, se muestra a un visitante navegando por la Landing Page, donde descubre que la plataforma permite:
+
+- Diseñar camisetas de forma personalizada, utilizando un editor intuitivo que facilita la creación desde cero o la modificación de diseños existentes.
+
+  
+
+- Explorar un catálogo de camisetas ya diseñadas, las cuales pueden ser adquiridas directamente.
+
+  
+
+- Utilizar plantillas prediseñadas como punto de partida para agilizar el proceso creativo.
+
+  
+
+A lo largo del video, el visitante interactúa con la Web App, visualizando productos, agregando camisetas al carrito de compras y, posteriormente, quitando algunas para ajustar su selección final. Todo esto ocurre en una interfaz limpia, moderna y fácil de usar, enfocada exclusivamente en camisetas como producto principal.
+
+El video no muestra registro de usuario, ya que para esta etapa aún no se ha habilitado esa funcionalidad. En cambio, se enfoca en demostrar el valor de la plataforma desde la perspectiva de un visitante que desea conocer el producto antes de registrarse o realizar una compra.
 
 # Conclusiones:
 
@@ -4249,6 +4409,28 @@ Desde la perspectiva del diseño visual y arquitectónico, se implementaron styl
 Durante el Sprint 1, se desarrollaron 22 historias de usuario correspondientes a las épicas de Landing Page, Responsive UI, Internacionalización y Accesibilidad, completándose el backlog planificado con éxito. El equipo demostró una alta capacidad de colaboración, distribución equitativa de responsabilidades y cumplimiento de estándares técnicos mediante el uso de herramientas como Jira, GitHub, Figma, PlantUML y Netlify. La landing page fue desplegada correctamente y validada funcionalmente bajo criterios de usabilidad, accesibilidad WCAG y diseño responsive, cumpliendo con los estándares establecidos para el ciclo inicial de desarrollo.
 
 Cabe destacar que, si bien este sprint se centró en la interfaz gráfica y la experiencia inicial del usuario, sentó las bases para la futura implementación de los servicios backend, APIs RESTful y microservicios modulares que articularán el núcleo transaccional de la plataforma en los siguientes sprints.
+
+
+
+**Conclusiones del Sprint 3**
+
+El Sprint 3 representó una fase crucial en el desarrollo de la plataforma TeeLab, ya que marcó el paso hacia la consolidación de funcionalidades esenciales tanto en el frontend como en el backend, además del despliegue inicial de los Web Services. Se lograron avances técnicos importantes, tales como la implementación y documentación de endpoints para el catálogo de productos, el carrito de compras, la gestión de órdenes y fabricantes, todos bajo especificaciones OpenAPI. Esto permitió sentar una base sólida para la interoperabilidad y la escalabilidad de la aplicación.
+
+Durante este Sprint también se realizaron entrevistas simuladas a distintos perfiles de usuario (cliente final y fabricante), cuyos hallazgos permitieron identificar áreas clave de mejora en la experiencia de usuario. Entre las principales observaciones se detectaron limitaciones en la capacidad de personalización dentro del editor de camisetas, como la imposibilidad de diseñar otras partes de la prenda (espalda o mangas), un set de herramientas muy básico y una selección restringida de fuentes y tipos de prendas. Por el lado de la visualización y compra, los usuarios reportaron la falta de información clara sobre el acabado final, materiales, y el fabricante del producto.
+
+Desde la perspectiva del fabricante, se evidenció la necesidad de mayor autonomía y visibilidad dentro de la plataforma: se carece de un espacio con lineamientos específicos, una vista centralizada de pedidos y herramientas para la comunicación con el cliente. También se identificó una falta de personalización del perfil del fabricante, lo que limita su capacidad para mostrar su marca o diferenciarse.
+
+En cuanto a la colaboración del equipo, se mantuvo una alta alineación con los objetivos del Sprint cumpliendo con los compromisos planificados. Se fortaleció la documentación técnica, se mejoraron las prácticas de revisión de código, y se incorporaron propuestas del Sprint anterior, como validaciones anticipadas y pruebas cruzadas en navegadores.
+
+**Recomendaciones y próximos pasos:**
+
+​	1.	Desarrollo de backend y APIs: Documentar y exponer servicios REST (OpenAPI/Swagger) para operaciones de autenticación y gestión de blueprints.
+
+​	2.	Pruebas automatizadas: Incorporar suites end-to-end que cubran navegación, accesibilidad y funcionalidades de editor de canvas.
+
+​	3.	Ajuste de estimaciones: Refinar story points de tareas i18n y UI según los hallazgos de la retrospectiva del Sprint 2.
+
+​	4.	Integración de métricas de calidad: Configurar Lighthouse CI para monitorear accesibilidad, performance y SEO en cada Pull Request.
 
 # Bibliografía:
 
