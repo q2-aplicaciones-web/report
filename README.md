@@ -4584,17 +4584,26 @@ Anexo 1.
 
 Repositorio de la organización: https://github.com/q2-aplicaciones-web
 
-Link Figma: https://www.figma.com/design/P54ccZqoZrJ9kii5rF08WM/Aplicaciones-Web---Q2?node-id=0-1&t=MbLYWMS3iS6s6M8U-1
+“Anexo: Diagrama User Persona” : https://shorturl.at/fsZ8L
 
-"Anexo: Diagrama de Lean UX Canvas" [https://drive.google.com/drive/folders/1ctYIYsZtXYcRKoBjgA4hCUx4Xmwf66EZ?usp=sharing
-](https://drive.google.com/drive/folders/1ctYIYsZtXYcRKoBjgA4hCUx4Xmwf66EZ?usp=sharing)“Anexo: Diagrama User Persona” [https://drive.google.com/drive/folders/1R8iOqc0ieVcnw8Vr9TyI9FlygRtZmc4k?usp=sharing
-](https://drive.google.com/drive/folders/1R8iOqc0ieVcnw8Vr9TyI9FlygRtZmc4k?usp=sharing)“Anexo: Diagrama Journey Mapping” https://drive.google.com/drive/folders/1h3zjZW7i1lTedkyJnTJQeXw4Y27kYPOY?usp=sharing
+“Anexo: Diagrama Journey Mapping” : https://shorturl.at/0Bdne
 
-“Anexo: Diagrama Empathy Mapping”
+“Anexo: Diagrama Empathy Mapping”: [https://shorturl.at/B3Lgg
+](https://shorturl.at/B3Lgg)“Anexo: Diagrama As is Scenario Mapping” :[https://acortar.link/c0uFoZ
+](https://acortar.link/c0uFoZ)“Anexo: Impact Mapping” : https://shorturl.at/ayerz
 
-[https://drive.google.com/drive/folders/1SmotEHZv7R4b4g4NwnTeehjksSv_uQhR?usp=sharing
-](https://drive.google.com/drive/folders/1SmotEHZv7R4b4g4NwnTeehjksSv_uQhR?usp=sharing)“Anexo: Diagrama Scenario Mapping” 
+Videos
 
-https://acortar.link/c0uFoZ
+upc-pre-202510-1asi0729-4350-Q2-needfinding-sprint-1: https://shorturl.at/qioy8
 
-“Anexo: Impact Mapping” https://drive.google.com/drive/folders/1SmotEHZv7R4b4g4NwnTeehjksSv_uQhR?usp=sharing
+upc-pre-202510-1asi0730-4395-Q2-product-navigation-sprint-1: https://short-link.me/11ZUr
+
+upc-pre-202510-1asi0730-4395-Q2-product-navigation-sprint-2: https://short-link.me/11ZUG
+
+upc-pre-202510-1asi0730-4395-Q2-validation-sprint-3 : https://short-link.me/16b23
+
+Link del deploy del web service: https://web-services-1-cads.onrender.com/swagger/index.html
+
+Link del deploy de web app: https://q2-teelab-app.netlify.app/sign-in
+
+Captura de la Landing Page en producción, accesible en: https://q2-teelab-app.netlify.app/
